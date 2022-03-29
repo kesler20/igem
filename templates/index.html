@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details</title>
+    <link href="{{ url_for('static', path='css/styles.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='css/navbar.css') }}" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Projects</a></li>
+        <img src="{{ url_for('static', path='img/Logo.jpg') }}" alt="" srcset="">
+        <div class="site-title">   
+            <h1>
+                <strong>
+                    Hello <a>World</a>
+                </strong>
+            </h1>
+        </div>
+        </ul>
+    </nav>
+    <div id="wrapper" class="grid-content">
+        <div id="operations">
+            <div class="flex-column">
+                <div class="title">
+                    <h1>Operations</h1>
+                </div>
+                <div class="functions">
+                    <a href="#">this</a>
+                </div>
+                <div class="functions">
+                    <a href="#">that</a>
+                </div>
+                <div class="functions">
+                    <a href="#">this</a>
+                </div>
+                <div class="functions">
+                    <a href="#">that</a>
+                </div>
+                <div class="functions">
+                    <a href="#">this</a>
+                </div>
+            </div>
+        </div>
+        <div class="gutter"></div>
+        <div id="recipe">
+            <div class="flex-column">
+                <div class="title">
+                    <h1>Recipe</h1>
+                </div>
+                <input type="text" class="text-area"/>
+                <div class="controls">
+                    <button type="button">Bake Recipe</button>
+                </div>
+            </div>
+        </div>
+        <div class="gutter"></div>
+        <div id="IO">
+            <div class="flex-column">
+                <div class="title">
+                    <h1>Input</h1>
+                </div>
+                <input class="text-area" type="text"/>
+                <div class="title">
+                    <h1>Output</h1>
+                </div>
+                <input type="text" class="text-area"/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

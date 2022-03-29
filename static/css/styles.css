@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------------------------------------------------- Typography ------------------------------------------------------------------------------------*/
+
+.wrapper{
+    font-family:'Lato' Arial, sans-serif;
+}
+
+/*-------------------------------------------------- General Styling ---------------------------------------------------------------------------------*/
+
+.flex-row {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-columns: 20% .2% 39.8% .2% 39.8%;
+}
+
+button {
+    display: inline-block;
+    background-color: #7b38d8;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  button:hover {
+    background-color: #f7c2f9;
+  }
+  button:hover span {
+    padding-right: 25px;
+  }
+  button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+/*---------------------------------------------------COMPONENTS-----------------------------------------------------------------------------------------*/
+
+.title {
+    background-color: #fafafa;
+    height: 10%;
+    color: rgb(49, 45, 45);
+    font-size: 0.6rem;
+    border: .5px #ccc solid;
+    padding: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.gutter {
+    background-color: #ccc;
+}
+
+/* -------------------------- SPECIFIC ----------------------*/
+
+#operations {
+    height: 100vh;
+    background-color: #ccc;
+}
+#IO {
+    height: 100vh;
+}
+#recipe {
+    height: 100vh;
+}
+
+.functions {
+    border: .5px #ccc solid;
+    font-family: sans-serif;
+    background-color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    padding: 10px;
+    height: 70px;
+    align-items: center;
+}
+
+.functions a {
+    text-decoration: none;
+    color: rgb(49, 44, 44);
+}
+
+.text-area {
+    height: 500px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    max-width: 50px;
+}
+
+.text-area:focus {
+    outline:none;
+}
