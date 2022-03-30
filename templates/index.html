@@ -5,35 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Item Details</title>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
     <link href="{{ url_for('static', path='css/styles.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', path='css/navbar.css') }}" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+    <nav class="nav-grid">
+        <div class="site-title">   
+            i<a>GEM</a>
         </div>
         <ul class="nav-links">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Projects</a></li>
-        <img src="{{ url_for('static', path='img/Logo.jpg') }}" alt="" srcset="">
-        <div class="site-title">   
-            <h1>
-                <strong>
-                    Hello <a>World</a>
-                </strong>
-            </h1>
-        </div>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Projects</a></li>
         </ul>
     </nav>
     <div id="wrapper" class="grid-content">
         <div id="operations">
             <div class="flex-column">
-                <div class="title">
-                    <h1>Operations</h1>
+                <div class="title">Operations</div>
+                <div class="functions">
+                    <input id="search" type="search" name="search-function" placeholder="Search a function..">
+                </div>
+                <div class="functions">
+                    <a href="#">this</a>
+                </div>
+                <div class="functions">
+                    <a href="#">that</a>
+                </div>
+                <div class="functions">
+                    <a href="#">this</a>
+                </div>
+                <div class="functions">
+                    <a href="#">that</a>
+                </div>
+                <div class="functions">
+                    <a href="#">this</a>
+                </div>
+                <div class="functions">
+                    <a href="#">this</a>
+                </div>
+                <div class="functions">
+                    <a href="#">that</a>
+                </div>
+                <div class="functions">
+                    <a href="#">this</a>
+                </div>
+                <div class="functions">
+                    <a href="#">that</a>
+                </div>
+                <div class="functions">
+                    <a href="#">this</a>
+                </div>
+                <div class="functions">
+                    <a href="#">this</a>
+                </div>
+                <div class="functions">
+                    <a href="#">that</a>
+                </div>
+                <div class="functions">
+                    <a href="#">this</a>
+                </div>
+                <div class="functions">
+                    <a href="#">that</a>
+                </div>
+                <div class="functions">
+                    <a href="#">this</a>
                 </div>
                 <div class="functions">
                     <a href="#">this</a>
@@ -55,26 +96,36 @@
         <div class="gutter"></div>
         <div id="recipe">
             <div class="flex-column">
-                <div class="title">
-                    <h1>Recipe</h1>
+                <div class="title grid-title">
+                    <p>Recipe</p>
+                    <i class="fas fa-save"></i>
+                    <i class="fas fa-folder"></i>
+                    <i class="fas fa-trash"></i>
                 </div>
-                <input type="text" class="text-area"/>
-                <div class="controls">
-                    <button type="button">Bake Recipe</button>
+                <textarea name="recipe" class="text-area" cols="30" rows="10"></textarea>
+                <div class="controls flex-row">
+                    <button class="btn">Verbose Recipe</button>
+                    <button class="button" type="button">Run</button>
                 </div>
             </div>
         </div>
         <div class="gutter"></div>
         <div id="IO">
             <div class="flex-column">
-                <div class="title">
-                    <h1>Input</h1>
+                <div class="title grid-title">
+                    <p>Input</p>
+                    <i class="fas fa-folder-plus"></i>
+                    <i class="fas fa-upload"></i>
+                    <i class="fas fa-trash"></i>
                 </div>
-                <input class="text-area" type="text"/>
-                <div class="title">
-                    <h1>Output</h1>
+                <textarea name="input" class="text-area" cols="30" rows="10"></textarea>
+                <div class="title grid-title">
+                    <p>Output</p>
+                    <i class="fas fa-save"></i>
+                    <i class="fas fa-copy"></i>
+                    <i class="fas fa-reply-all"></i>
                 </div>
-                <input type="text" class="text-area"/>
+                <textarea name="output" class="text-area" cols="30" rows="10"></textarea>
             </div>
         </div>
     </div>
