@@ -9,32 +9,36 @@
     <link href="{{ url_for('static', path='css/navbar.css') }}" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        </div>
-        <ul class="nav-links">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Projects</a></li>
-        <img src="{{ url_for('static', path='img/Logo.jpg') }}" alt="" srcset="">
-        <div class="site-title">   
-            <h1>
-                <strong>
-                    Hello <a>World</a>
-                </strong>
-            </h1>
-        </div>
-        </ul>
-    </nav>
-    <div id="wrapper" class="grid-content">
-        <div id="operations">
-            <div class="flex-column">
+    <div id="content-wrapper" class="grid-content">
+        <nav style="z-index:10; overflow: hidden;">
+            <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            </div>
+            <ul class="nav-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Projects</a></li>
+            <img src="{{ url_for('static', path='img/Logo.jpg') }}" alt="" srcset="">
+            <div class="site-title">   
+                <h1>
+                    <strong>
+                        Hello <a>World</a>
+                    </strong>
+                </h1>
+            </div>
+            </ul>
+        </nav>
+        <div id="workspace-wrapper">
+            <div id="operations" class="split split-horizontal">
                 <div class="title">
-                    <h1>Operations</h1>
+                    <div class="title">Operations</div>
                 </div>
+                <span class="bmd-form-group">
+                    <input type="search" id="search" class="form-control" placeholder="Search..." tabindex="2">
+                </span>
+                
                 <div class="functions">
                     <a href="#">this</a>
                 </div>
@@ -51,30 +55,30 @@
                     <a href="#">this</a>
                 </div>
             </div>
-        </div>
-        <div class="gutter"></div>
-        <div id="recipe">
-            <div class="flex-column">
-                <div class="title">
-                    <h1>Recipe</h1>
-                </div>
-                <input type="text" class="text-area"/>
-                <div class="controls">
-                    <button type="button">Bake Recipe</button>
+            <div class="gutter"></div>
+            <div id="recipe">
+                <div class="flex-column">
+                    <div class="title">
+                        <h1>Recipe</h1>
+                    </div>
+                    <input type="text" class="text-area"/>
+                    <div class="controls">
+                        <button type="button">Bake Recipe</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="gutter"></div>
-        <div id="IO">
-            <div class="flex-column">
-                <div class="title">
-                    <h1>Input</h1>
+            <div class="gutter"></div>
+            <div id="IO">
+                <div class="flex-column">
+                    <div class="title">
+                        <h1>Input</h1>
+                    </div>
+                    <input class="text-area" type="text"/>
+                    <div class="title">
+                        <h1>Output</h1>
+                    </div>
+                    <input type="text" class="text-area"/>
                 </div>
-                <input class="text-area" type="text"/>
-                <div class="title">
-                    <h1>Output</h1>
-                </div>
-                <input type="text" class="text-area"/>
             </div>
         </div>
     </div>

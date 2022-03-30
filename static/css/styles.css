@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100');
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap');
 
-* {
+*, ::before, ::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,13 +17,16 @@
     --fixed-width-font-size: inherit;
     --subtext-font-colour: #999;
     --subtext-font-size: 13px;
-    --primary-background-colour: #fff;
+    --primary-background-colour: rgb(250,250,250);
     --secondary-background-colour: #fafafa;
     --primary-border-colour: #ddd;
     --secondary-border-colour: #eee;
     --title-colour: #424242;
     --title-weight: bold;
+    --title-height: 48px;
     --title-size: 16px;
+    --tab-height: 40px;
+    --text-size-adjust: 100%;
     --title-background-colour: #fafafa;
     --banner-font-colour: #468847;
     --banner-bg-colour: #dff0d8;
@@ -92,6 +95,7 @@
     --code-font-colour: #c7254e;
     --input-highlight-colour: #1976d2;
     --input-border-colour: #424242;
+    --controls-height: 75px;
 }
 
 :root {
@@ -125,24 +129,23 @@
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.title {
-    padding: 8px 12px;
-    height: var(--title-height);
-    border-bottom: 1px solid var(--primary-border-colour);
-    font-weight: var(--title-weight);
-    font-size: var(--title-size);
-    color: var(--title-colour);
-    background-color: var(--title-background-colour);
-    line-height: calc(var(--title-height) - 14px);
+div {
+    display: block;
 }
 
-/*-------------------------------------------------- Typography ------------------------------------------------------------------------------------*/
-
-.wrapper{
-    font-family: 'Red Hat Mono', monospace;
+body {
+    font-family: var(--primary-font-family);
+    font-size: var(--primary-font-size);
+    line-height: var(--primary-line-height);
+    color: var(--primary-font-colour);
+    font-weight: 400;
+    margin: 0px;
+    text-align: left;
+    overflow: hidden;
+    background-color: var(--primary-background-colour);
 }
 
-/*-------------------------------------------------- General Styling ---------------------------------------------------------------------------------*/
+/*-------------------------------------------------- Components ---------------------------------------------------------------------------------*/
 
 .flex-row {
     display: flex;
@@ -198,33 +201,35 @@ button {
     opacity: 1;
     right: 0;
 }
-/*---------------------------------------------------COMPONENTS-----------------------------------------------------------------------------------------*/
+
+.split {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.split.split-horizontal,
+.gutter.gutter-horizontal {
+    float: left;
+}
 
 .title {
-    background-color: #fafafa;
-    height: 10%;
-    color: rgb(49, 45, 45);
-    font-size: 0.6rem;
-    border: .5px #ccc solid;
-    padding: 10px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 8px 12px;
+    height: var(--title-height);
+    border-bottom: 1px solid var(--primary-border-colour);
+    font-weight: var(--title-weight);
+    font-size: var(--title-size);
+    color: var(--title-colour);
+    background-color: var(--title-background-colour);
+    line-height: calc(var(--title-height) - 14px);
+}
+
+.bmd-form-group {
+    position: relative;
+    padding-top: 1.75rem;
 }
 
 .gutter {
     background-color: #ccc;
-}
-
-/* -------------------------- SPECIFIC ----------------------*/
-
-#operations {
-    height: 100vh;
-    background-color: #ccc;
-}
-#IO {
-    height: 100vh;
-}
-#recipe {
-    height: 100vh;
 }
 
 .functions {
@@ -254,5 +259,109 @@ button {
 }
 
 .text-area:focus {
-    outline:none;
+    outline: none;
 }
+
+.form-control {
+    color: var(--primary-font-colour)
+}
+
+.bmd-form-group input.form-control, .bmd-form-group input.custom-file-control, .bmd-form-group input.form-control::placeholder, .bmd-form-group input.custom-file-control::placeholder {
+    padding: 0.28125rem 0px;
+    line-height: 1.5;
+}
+.form-control, .custom-file-control {
+    background: center bottom / 0px 100% no-repeat, center calc(100% - 1px) / 100% 100%;
+    border: 0px;
+    transition: background 0s ease-out 0s;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.form-control, .custom-file-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.875rem + 2px);
+    padding: 0.4375rem 0px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgb(73, 80, 87);
+    background-color: rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    border-radius: 0px;
+    box-shadow: none;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+input, button, select, optgroup, textarea {
+    margin: 0px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+input {
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+/* -------------------------- SPECIFIC ----------------------*/
+
+#content-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#workspace-wrapper {
+    position: absolute;
+    top: 30px;
+    bottom: 0px;
+    width: 100%;
+}
+
+#operations {
+    height: 100%;
+    background-color: #ccc;
+    width: calc(25% - 2px);
+}
+
+#operations.split {
+    overflow: auto;
+}
+
+#IO {
+    height: 100vh;
+}
+#recipe {
+    height: 100vh;
+}
+
+#search { 
+    padding-left: 10px;
+    padding-right: 10px;
+    background-image: linear-gradient(to top, var(--input-highlight-colour) 2px, rgba(0, 0, 0, 0) 2px), linear-gradient(to top, var(--primary-border-colour) 1px, rgba(0, 0, 0, 0) 1px);
+}
+
