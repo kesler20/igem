@@ -1,14 +1,26 @@
-from typing import Optional
-from fastapi import FastAPI, Request
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
-from fastapi.responses import HTMLResponse
+from flask import redirect, url_for, render_template, request, session, flash
+from datetime import timedelta
+from flask import Flask
+import os
+from flask_sqlalchemy import SQLAlchemy
 
-app = FastAPI()
+ROOT_DIR = os.path.dirname(os.getcwd())
+print(ROOT_DIR+r'\igem'+r'\templates')
+print(ROOT_DIR+r'\igem'+r'\static')
+app = Flask(
+    __name__, 
+    template_folder=ROOT_DIR+r'\igem'+r'\templates',
+    static_folder=ROOT_DIR+r'\igem'+r'\static'
+)
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="templates")
+@app.route('/')
+def home():
+    return render_template('index.html')
 
-@app.get("/{endpoint}", response_class=HTMLResponse)
-async def read_root(request: Request):
-    return templates.TemplateResponse("index.html",{"request": request})
+
+@app.route('/{any}')
+def general_redirect():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5500)
