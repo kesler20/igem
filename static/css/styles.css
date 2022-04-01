@@ -10,7 +10,8 @@
 
 :root, :root.classic {
     --primary-font-family: 'Red Hat Mono', monospace;
-    --primary-font-colour: rgb(49, 45, 45);
+    --primary-font-colour: #2bc1e2;
+    --secondary-font-color: #abb8ca;
     --primary-font-size: 1.3rem;
     --primary-font-weight: 600;
     --secondary-font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -18,6 +19,7 @@
     --secondary-color: #1d2432;
     --tertiary-color: #050c1b;
     --nav-color: #39424e;
+    --borders-color: #111827;
 }
 
 body {
@@ -26,8 +28,6 @@ body {
     margin: 0px;
     overflow: hidden;
     scrollbar-color: var(--secondary-color);
-    scrollbar-arrow-color: var(--secondary-color);
-    scrollbar-base-color: var(--primary-color);
 }
 
 /*-------------------------------------------------- General Styling ---------------------------------------------------------------------------------*/
@@ -73,19 +73,22 @@ body {
     height: 60px;
     width: 200px;
     padding: 2px;
-    background-color: var(--secondary-color);
-    color: white;
+    background-color: white;
+    color: var(--primary-font-colour);
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 900;
     font-family: 'Source Code Pro', monospace;
     border-radius: 10px;
 }
 
+.title i:hover {
+    color: var(--secondary-font-color);
+}
 /*---------------------------------------------------COMPONENTS-----------------------------------------------------------------------------------------*/
 
 .gutter {
-    background-color: #ccc;
-    width : 2px;
+    background-color: var(--borders-color);
+    width : 100%;
 }
 
 .title {
@@ -93,14 +96,14 @@ body {
     height: 50px;
     color: var(--primary-font-colour);
     font-size: 1.3rem;
-    border: .5px #ccc solid;
+    border: .5px var(--borders-color) solid;
     padding: 10px;
     font-family: var(--primary-font-family);
     font-weight: var(--primary-font-weight);
 }
 
 .functions {
-    border: .5px #ccc solid;
+    border: .5px var(--borders-color) solid;
     font-family: var(--secondary-font-family);
     background-color: var(--tertiary-color);
     font-size: 1.2rem;
@@ -116,12 +119,12 @@ body {
 }
 
 .functions a:hover {
-    border-bottom: 1px solid var(--primary-font-colour);
+    border-bottom: 1px solid var(--secondary-font-color);
 }
 
 .functions a {
     text-decoration: none;
-    color: var(--primary-font-colour);
+    color: var(--secondary-font-color);
 }
 
 .text-area {
@@ -135,12 +138,13 @@ body {
     width: 100%;
     font-size: 1.1rem;
     font-weight: var(--primary-font-weight);
+    color: var(--secondary-font-color);
     font-family: 'Source Code Pro', monospace;
 }
 
 .controls {
     background-color: var(--primary-color);
-    border: .5px #ccc solid;
+    border: .5px var(--borders-color) solid;
     padding: 10px;
     align-items: center;
     margin-top : calc(100vh - 907px);
@@ -150,7 +154,7 @@ body {
 
 #operations {
     height: 100vh;
-    background-color: #ccc;
+    background-color: var(--borders-color);
     overflow: scroll;
 }
 
@@ -173,6 +177,7 @@ body {
     height: 100%;
     width: 100%;
     font-family: var(--primary-font-family);
+    font-weight: var(--primary-font-weight);
     border: 1px solid grey;
     border-radius: 10px;
     padding: 10px;

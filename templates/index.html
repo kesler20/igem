@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Item Details</title>
+    <title>Uos iGEM</title>
+    <link rel="icon" href="{{ url_for('static', path='img/Logo.jpg') }}">
     <link rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
@@ -16,9 +17,9 @@
 <body>
     <nav class="nav-grid">
         <div class="site-title">   
-            i<a>GEM</a>
+            <h1>i<a>GEM</a></h1>
         </div>
-        <ul class="nav-links">
+        <ul class="nav-links flex-row">
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Projects</a></li>
@@ -105,7 +106,6 @@
                 <textarea name="recipe" class="text-area" cols="30" rows="10"></textarea>
                 <div class="controls flex-row">
                     <button class="btn">Verbose Recipe</button>
-                    <button class="button" type="button">Run</button>
                 </div>
             </div>
         </div>
