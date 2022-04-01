@@ -4,13 +4,10 @@ from flask import Flask
 import os
 from flask_sqlalchemy import SQLAlchemy
 
-ROOT_DIR = os.path.dirname(os.getcwd())
-print(ROOT_DIR+r'\templates')
-print(ROOT_DIR+r'\static')
 app = Flask(
     __name__, 
-    template_folder=ROOT_DIR+r'\templates',
-    static_folder=ROOT_DIR+r'\static'
+    template_folder='templates',
+    static_folder='static'
 )
 
 @app.route('/')
