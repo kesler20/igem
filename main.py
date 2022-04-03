@@ -4,10 +4,12 @@ from flask import Flask
 import os
 from flask_sqlalchemy import SQLAlchemy
 
+Root_dir = os.getcwd()
+
 app = Flask(
     __name__, 
-    template_folder='templates',
-    static_folder='static'
+    template_folder=os.path.join(Root_dir,'templates'),
+    static_folder=os.path.join(Root_dir,'static')
 )
 
 @app.route('/')
@@ -20,4 +22,4 @@ def general_redirect():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=5500,debug=True)
