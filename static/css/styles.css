@@ -20,6 +20,7 @@
     --tertiary-color: #050c1b;
     --nav-color: #39424e;
     --borders-color: #111827;
+    --static-color: white;
 }
 
 body {
@@ -56,8 +57,8 @@ body {
 .button {
     background-color: rgb(17, 223, 17);
     border-radius: 10px;
-    border: 4px double #cccccc;
-    color: #eeeeee;
+    border: 4px double var(--static-color);
+    color: var(--static-color);
     text-align: center;
     font-size: 1.2rem;
     font-family: 'Source Code Pro', monospace;
@@ -73,7 +74,7 @@ body {
     height: 60px;
     width: 200px;
     padding: 2px;
-    background-color: white;
+    background-color: var(--static-color);
     color: var(--primary-font-colour);
     font-size: 1.2rem;
     font-weight: 900;
@@ -178,7 +179,7 @@ body {
     width: 100%;
     font-family: var(--primary-font-family);
     font-weight: var(--primary-font-weight);
-    border: 1px solid grey;
+    border: 1px solid var(--static-color);
     border-radius: 10px;
     padding: 10px;
 }
