@@ -24,7 +24,7 @@ body.dark {
   --static-color: white;
 }
 
-body.light {
+body {
   --primary-font-family: "Red Hat Mono", monospace;
   --primary-font-colour: #18394a;
   --secondary-font-color: red;
@@ -33,14 +33,11 @@ body.light {
   --secondary-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   --primary-color: white;
-  --secondary-color: white;
+  --secondary-color: #62839c;
   --tertiary-color: #62839c;
-  --nav-color: #18394a;
+  --nav-color: #62839c;
   --borders-color: #ffeea4;
   --static-color: white;
-}
-
-body {
   background-color: var(--secondary-color);
   max-height: 50vh;
   margin: 0px;
@@ -101,7 +98,7 @@ body {
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .title i:hover {

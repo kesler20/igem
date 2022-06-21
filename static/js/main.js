@@ -1,6 +1,8 @@
 const operations = document.querySelector("#operations");
 const inputData = document.querySelector(".input");
 const outputData = document.querySelector(".output");
+const logo = document.querySelector(".logo");
+const bodyElement = document.querySelector("body");
 
 operations.addEventListener("click", (e) => {
   if (e.target.innerText === "this") {
@@ -24,22 +26,9 @@ const thatFunction = () => {
   });
 };
 
-let dark = true;
-let light = false;
-const darkMode = document.querySelector(".fa-moon");
-const lightMode = document.querySelector(".fa-sun");
-const bodyElement = document.querySelector('body')
+let darkBg = true;
 
-darkMode.addEventListener("click", () => {
-  bodyElement.classList.toggle('dark', !light)
-  lightMode.classList.toggle("hide", !light);
-  darkMode.classList.toggle("hide", !dark);
-  dark = !dark;
-});
-
-lightMode.addEventListener("click", () => {
-  bodyElement.classList.toggle('light', !light)
-  lightMode.classList.toggle("hide", !light);
-  darkMode.classList.toggle("hide", !dark);
-  light = !light;
+logo.addEventListener("click", () => {
+  bodyElement.classList.toggle("dark", !darkBg);
+  darkBg = !darkBg
 });

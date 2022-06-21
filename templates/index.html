@@ -25,9 +25,13 @@
   <body class="dark">
     <nav class="nav-grid">
       <div class="site-title">
-        <img src="{{ url_for('static', filename='img/Logo.svg') }}" alt="" srcset="" style="width: 50px;">
-        <i class="fas fa-moon fa-2x hide" style="color: black"></i>
-        <i class="fas fa-sun fa-2x" style="color: white"></i>
+        <img
+        class="logo"
+          src="{{ url_for('static', filename='img/Logo.svg') }}"
+          alt=""
+          srcset=""
+          style="width: 40px; margin-top: 10px;"
+        />
       </div>
       <ul class="nav-links flex-row">
         <li><a href="#">About</a></li>
