@@ -1,135 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Uos iGEM</title>
-    <link rel="icon" href="{{ url_for('static', filename='img/Logo.jpg') }}">
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
-    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer" />
-    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/navbar.css') }}" rel="stylesheet">
-</head>
-<body>
+    <link rel="icon" href="{{ url_for('static', filename='img/Logo.svg') }}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="{{ url_for('static', filename='css/styles.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='css/navbar.css') }}"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark">
     <nav class="nav-grid">
-        <div class="site-title">   
-            <h1>i<a>GEM</a></h1>
-        </div>
-        <ul class="nav-links flex-row">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Projects</a></li>
-        </ul>
+      <div class="site-title">
+        <img src="{{ url_for('static', filename='img/Logo.svg') }}" alt="" srcset="" style="width: 50px;">
+        <i class="fas fa-moon fa-2x hide" style="color: black"></i>
+        <i class="fas fa-sun fa-2x" style="color: white"></i>
+      </div>
+      <ul class="nav-links flex-row">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Projects</a></li>
+      </ul>
     </nav>
     <div id="wrapper" class="grid-content">
-        <div id="operations">
-            <div class="flex-column">
-                <div class="title">Operations</div>
-                <div class="functions">
-                    <input id="search" type="search" name="search-function" placeholder="Search a function..">
-                </div>
-                <div class="functions">
-                    <a href="#">this</a>
-                </div>
-                <div class="functions">
-                    <a href="#">that</a>
-                </div>
-                <div class="functions">
-                    <a href="#">this</a>
-                </div>
-                <div class="functions">
-                    <a href="#">that</a>
-                </div>
-                <div class="functions">
-                    <a href="#">this</a>
-                </div>
-                <div class="functions">
-                    <a href="#">this</a>
-                </div>
-                <div class="functions">
-                    <a href="#">that</a>
-                </div>
-                <div class="functions">
-                    <a href="#">this</a>
-                </div>
-                <div class="functions">
-                    <a href="#">that</a>
-                </div>
-                <div class="functions">
-                    <a href="#">this</a>
-                </div>
-                <div class="functions">
-                    <a href="#">this</a>
-                </div>
-                <div class="functions">
-                    <a href="#">that</a>
-                </div>
-                <div class="functions">
-                    <a href="#">this</a>
-                </div>
-                <div class="functions">
-                    <a href="#">that</a>
-                </div>
-                <div class="functions">
-                    <a href="#">this</a>
-                </div>
-                <div class="functions">
-                    <a href="#">this</a>
-                </div>
-                <div class="functions">
-                    <a href="#">that</a>
-                </div>
-                <div class="functions">
-                    <a href="#">this</a>
-                </div>
-                <div class="functions">
-                    <a href="#">that</a>
-                </div>
-                <div class="functions">
-                    <a href="#">this</a>
-                </div>
-            </div>
+      <div id="operations">
+        <div class="flex-column">
+          <div class="title">Operations</div>
+          <div class="functions">
+            <input
+              id="search"
+              type="search"
+              name="search-function"
+              placeholder="Search a function.."
+            />
+          </div>
+          <div class="functions">
+            <a href="#">this</a>
+          </div>
+          <div class="functions">
+            <a href="#">that</a>
+          </div>
+          <div class="functions">
+            <a href="#">this</a>
+          </div>
+          <div class="functions">
+            <a href="#">that</a>
+          </div>
+          <div class="functions">
+            <a href="#">this</a>
+          </div>
+          <div class="functions">
+            <a href="#">this</a>
+          </div>
+          <div class="functions">
+            <a href="#">that</a>
+          </div>
+          <div class="functions">
+            <a href="#">this</a>
+          </div>
+          <div class="functions">
+            <a href="#">that</a>
+          </div>
+          <div class="functions">
+            <a href="#">this</a>
+          </div>
+          <div class="functions">
+            <a href="#">this</a>
+          </div>
+          <div class="functions">
+            <a href="#">that</a>
+          </div>
+          <div class="functions">
+            <a href="#">this</a>
+          </div>
+          <div class="functions">
+            <a href="#">that</a>
+          </div>
+          <div class="functions">
+            <a href="#">this</a>
+          </div>
+          <div class="functions">
+            <a href="#">this</a>
+          </div>
+          <div class="functions">
+            <a href="#">that</a>
+          </div>
+          <div class="functions">
+            <a href="#">this</a>
+          </div>
+          <div class="functions">
+            <a href="#">that</a>
+          </div>
+          <div class="functions">
+            <a href="#">this</a>
+          </div>
         </div>
-        <div class="gutter"></div>
-        <div id="recipe">
-            <div class="flex-column">
-                <div class="title grid-title">
-                    <p>Recipe</p>
-                    <i class="fas fa-save"></i>
-                    <i class="fas fa-folder"></i>
-                    <i class="fas fa-trash"></i>
-                </div>
-                <textarea name="recipe" class="text-area" cols="30" rows="10"></textarea>
-                <div class="controls flex-row">
-                    <button class="btn">Verbose Recipe</button>
-                </div>
-            </div>
+      </div>
+      <div class="gutter"></div>
+      <div id="recipe">
+        <div class="flex-column">
+          <div class="title grid-title">
+            <p>Recipe</p>
+            <i class="fas fa-save"></i>
+            <i class="fas fa-folder"></i>
+            <i class="fas fa-trash"></i>
+          </div>
+          <textarea
+            name="recipe"
+            class="text-area"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <div class="controls flex-row">
+            <button class="btn">Verbose Recipe</button>
+          </div>
         </div>
-        <div class="gutter"></div>
-        <div id="IO">
-            <div class="flex-column">
-                <div class="title grid-title">
-                    <p>Input</p>
-                    <i class="fas fa-folder-plus"></i>
-                    <i class="fas fa-upload"></i>
-                    <i class="fas fa-trash"></i>
-                </div>
-                <textarea name="input" class="text-area" cols="30" rows="10"></textarea>
-                <div class="title grid-title">
-                    <p>Output</p>
-                    <i class="fas fa-save"></i>
-                    <i class="fas fa-copy"></i>
-                    <i class="fas fa-reply-all"></i>
-                </div>
-                <textarea name="output" class="text-area" cols="30" rows="10"></textarea>
-            </div>
+      </div>
+      <div class="gutter"></div>
+      <div id="IO">
+        <div class="flex-column">
+          <div class="title grid-title">
+            <p>Input</p>
+            <i class="fas fa-folder-plus"></i>
+            <i class="fas fa-upload"></i>
+            <i class="fas fa-trash"></i>
+          </div>
+          <textarea
+            name="input"
+            class="text-area input"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <div class="title grid-title">
+            <p>Output</p>
+            <i class="fas fa-save"></i>
+            <i class="fas fa-copy"></i>
+            <i class="fas fa-reply-all"></i>
+          </div>
+          <textarea
+            name="output"
+            class="text-area output"
+            cols="30"
+            rows="10"
+          ></textarea>
         </div>
+      </div>
     </div>
-</body>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
 </html>
-
-
